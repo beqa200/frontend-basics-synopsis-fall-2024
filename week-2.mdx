@@ -1,0 +1,52 @@
+
+# CSS-ის საფუძვლები და Flexbox
+
+## განხილული თემები
+
+### CSS სელექტორები:
+- **თეგის სელექტორები (Tag Name):** ელემენტების შერჩევა მათი ტეგის სახელის მიხედვით, მაგალითად: `div`, `p`, `h1`.
+- **კლასის სელექტორები:** ელემენტების შერჩევა კონკრეტული კლასის გამოყენებით, მაგალითად `.classname`.
+- **ID სელექტორები:** ერთეული ელემენტების შერჩევა უნიკალური ID-ს გამოყენებით, მაგალითად `#idname`.
+
+**სელექტორების იერარქია:**
+- Inline სტილები (`style=""`) > ID სელექტორები (`#id`) > კლასის სელექტორები (`.class`) > თეგის სელექტორები (`tagname`).
+
+### CSS-ის დაწერის მეთოდები
+- **Inline CSS:** სტილების პირდაპირ ელემენტზე დამატება `style` ატრიბუტის გამოყენებით.
+  ```html
+  <p style="color: blue; font-size: 16px;">ეს არის inline CSS</p>
+  ```
+- **შიდა CSS (`<head>`-ში):** სტილების განსაზღვრა `<style>` ტეგში HTML დოკუმენტში.
+  ```html
+  <head>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  ```
+- **გარე CSS (ცალკე ფაილი):** `.css` ფაილის დაკავშირება HTML დოკუმენტთან, რაც უზრუნველყოფს კოდის სისუფთავეს და ორგანიზებულობას.
+  ```html
+  <link rel="stylesheet" href="styles.css" />
+  ```
+
+### Flexbox: 
+- **Flexbox-ის გაცნობა:** მძლავრი layout მოდელი, რომელიც განკუთვნილია ჰორიზონტალური აქსისის შემოსაღებად და ასევე ამ layout-ში მდებარე ელემენტების მარტივად პოზიციონირებისთვის.
+- **Flexbox-ის ძირითადი თვისებები:**
+  
+  - `display: flex;`
+  - `justify-content` (მაგალითად: `center`, `space-between`, `space-around`)
+  - `align-items` (მაგალითად: `flex-start`, `center`, `stretch`)
+  - `flax-wrap` (მაგალითად: `wrap`, `no-wrap`)
+  - `flex-direction` (მაგალითად: `row`, `column`)
+
+**Flexbox-ის გამოყენების მაგალითი:**
+```html
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="background: lightblue; padding: 20px;">ობიექტი 1</div>
+  <div style="background: lightgreen; padding: 20px;">ობიექტი 2</div>
+  <div style="background: lightcoral; padding: 20px;">ობიექტი 3</div>
+</div>
+```
+
